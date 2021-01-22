@@ -1,5 +1,3 @@
-Copyright (C) 2019 The MoKee Open Source Project
-
 Device configuration for Xiaomi Redmi 3/Pro (ido)
 =====================================
 
@@ -20,4 +18,4 @@ Front Camera | 5.0 MP
 FingerPrint | Redmi 3 Pro (FPC1020)
 Release Date | January 2016
 
-![Xiaomi Redmi 3](http://cdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-3-0.jpg "Xiaomi Redmi 3")
+![Xiaomi Redmi 3](https://telegra.ph/file/174310fbed852fa6985a4.png "Xiaomi Redmi 3")

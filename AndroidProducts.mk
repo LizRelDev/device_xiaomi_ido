@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/mokee_ido.mk
+
+COMMON_LUNCH_CHOICES := \
+    mokee_ido-user \
+    mokee_ido-userdebug \
+    mokee_ido-eng

@@ -13,25 +13,29 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/xiaomi/ido/full_ido.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from ido device
+$(call inherit-product, device/xiaomi/ido/device.mk)
 
 # Inherit some common Mokee stuff.
 $(call inherit-product, vendor/mokee/config/common_full_phone.mk)
 
-# Must define platform variant before including any common things
-TARGET_BOARD_PLATFORM_VARIANT := msm8939
-
 # Assert
-TARGET_OTA_ASSERT_DEVICE := ido
-
-PRODUCT_NAME := mokee_ido
-BOARD_VENDOR := xiaomi
 PRODUCT_DEVICE := ido
+PRODUCT_NAME := mokee_ido
+PRODUCT_BRAND := Xiaomi
+BOARD_VENDOR := xiaomi
+PRODUCT_MODEL := Redmi 3
+PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 # Build fingerprint
-BUILD_FINGERPRINT="Xiaomi/ido/ido:5.1.1/LMY47V/V9.6.1.0.LAICNFD:user/release-keys"
+BUILD_FINGERPRINT := "Xiaomi/ido/ido:5.1.1/LMY47V/V9.6.1.0.LAICNFD:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="ido-user 5.1.1 LMY47V V9.6.1.0.LAICNFD release-keys"
