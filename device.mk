@@ -289,11 +289,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.mokee.touch@1.0-service.ido
 
-# TimeKeep
-PRODUCT_PACKAGES += \
-    timekeep \
-    TimeKeep
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
