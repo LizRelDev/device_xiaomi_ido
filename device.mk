@@ -111,6 +111,7 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml \
     memtrack.msm8916 \
+    copybit.msm8916
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
