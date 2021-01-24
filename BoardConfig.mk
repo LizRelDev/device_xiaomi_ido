@@ -132,6 +132,7 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/xiaomi/ido
+TARGET_KERNEL_VERSION := 3.10
 TARGET_KERNEL_CONFIG := ido_defconfig
 
 # Media
