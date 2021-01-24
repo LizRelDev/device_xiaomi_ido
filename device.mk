@@ -285,10 +285,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_SYSTEM)/vendor/etc/thermal-engine.conf
 
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.mokee.touch@1.0-service.ido
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
