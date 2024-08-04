@@ -15,8 +15,8 @@
 
 $(call inherit-product, device/xiaomi/ido/full_ido.mk)
 
-# Inherit some common Nusantara stuff.
-$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
+# Inherit some common QASSA stuff.
+$(call inherit-product, vendor/qassa/config/common_full_phone.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8939
@@ -27,17 +27,20 @@ TARGET_OTA_ASSERT_DEVICE := ido
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 720
 
-# Build Type
-NAD_BUILD_TYPE := OFFICIAL
+# Inherit QASSA Stuff
+QASSA_MAINTAINER := LizRelDev
+TARGET_GAPPS_ARCH := arm64
+TARGET_FACE_UNLOCK_SUPPORTED := true
+USE_PIXEL_CHARGER := true
 
-PRODUCT_NAME := nad_ido
+PRODUCT_NAME := qassa_ido
 BOARD_VENDOR := xiaomi
 PRODUCT_DEVICE := ido
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Build fingerprint
-BUILD_FINGERPRINT="Xiaomi/ido/ido:5.1.1/LMY47V/V9.6.1.0.LAICNFD:user/release-keys"
+BUILD_FINGERPRINT="google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="ido-user 5.1.1 LMY47V V9.6.1.0.LAICNFD release-keys"
