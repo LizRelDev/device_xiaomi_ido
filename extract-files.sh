@@ -25,9 +25,9 @@ VENDOR=xiaomi
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-NAD_ROOT="$MY_DIR"/../../..
+QASSA_ROOT="$MY_DIR"/../../..
 
-HELPER="$NAD_ROOT"/vendor/nusantara/build/tools/extract_utils.sh
+HELPER="$QASSA_ROOT"/vendor/qassa/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -56,11 +56,11 @@ if [ -z "$SRC" ]; then
 fi
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$NAD_ROOT" false "$CLEAN_VENDOR"
+setup_vendor "$DEVICE" "$VENDOR" "$QASSA_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
-BLOB_ROOT="$NAD_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+BLOB_ROOT="$QASSA_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
 sed -i "s|/system/etc/aanc_tuning_mixer.txt|/vendor/etc/aanc_tuning_mixer.txt|g" "$BLOB_ROOT"/vendor/lib/libacdbloader.so
 sed -i "s|/system/etc/aanc_tuning_mixer.txt|/vendor/etc/aanc_tuning_mixer.txt|g" "$BLOB_ROOT"/vendor/lib64/libacdbloader.so

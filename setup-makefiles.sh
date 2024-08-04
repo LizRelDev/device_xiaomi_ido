@@ -27,9 +27,9 @@ INITIAL_COPYRIGHT_YEAR=2019
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-NAD_ROOT="$MY_DIR"/../../..
+QASSA_ROOT="$MY_DIR"/../../..
 
-HELPER="$NAD_ROOT"/vendor/nusantara/build/tools/extract_utils.sh
+HELPER="$QASSA_ROOT"/vendor/qassa/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -37,7 +37,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$NAD_ROOT"
+setup_vendor "$DEVICE" "$VENDOR" "$QASSA_ROOT"
 
 # Copyright headers and guards
 write_headers
